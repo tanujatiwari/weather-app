@@ -1,13 +1,19 @@
 const form = document.querySelector('form')
 let weatherData;
 
-window.onload = async function getCurLoc() {
-    weatherData = await findWeather(28.7041, 77.1025)
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getPosition);
-    } else {
-        console.log("Geolocation is not supported by this browser.")
-    }
+// window.onload = async function getCurLoc() {
+//     weatherData = await findCor('Delhi')
+//     const locImg = await findImg('Delhi')
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(getPosition);
+//     } else {
+//         console.log("Geolocation is not supported by this browser.")
+//     }
+// }
+
+const findImg = async (city) => {
+    const res = await axios.get(`https://api.unsplash.com/search/photos?client_id=${env.secret_key}&query=${city}&page=1&per_page=1`)
+    return res.data
 }
 
 async function getPosition(position) {
@@ -38,4 +44,5 @@ form.addEventListener('submit', async (e) => {
     const searchCity = form.elements.city.value
     const cityData = await findCor(searchCity.toLowerCase());
     weatherData = await findWeather(cityData.lat, cityData.lon);
+    const locImg = await findImg(searchCity)
 })
