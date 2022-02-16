@@ -20,7 +20,6 @@ function timeConverter(UNIX_timestamp) {
 const renderWeatherDetails = (data) => {
     let date = document.querySelector('.basic-weather-details h2 span')
     let temp = document.querySelector('.basic-weather-details h3 span')
-    let country = document.querySelector('#country')
     let weatherIcon = document.querySelector('.weather-desc .icon')
     let weatherDesc = document.querySelector('.weather-desc p')
     let pressure = document.querySelector('#pressure p')
@@ -29,7 +28,7 @@ const renderWeatherDetails = (data) => {
     let windSpeed = document.querySelector('#wind-speed p')
     let tempMax = document.querySelector('.temp-max h3 span')
     let tempMin = document.querySelector('.temp-min h3 span')
-    temp.innerText = data.main.temp
+    temp.innerText = data.main.temp + ', ' + data.weather[0].main
     date.innerText = timeConverter(data.dt)
     tempMax.innerText = data.main.temp_max
     tempMin.innerText = data.main.temp_min
@@ -37,7 +36,7 @@ const renderWeatherDetails = (data) => {
     humidity.innerText = data.main.humidity
     visibility.innerText = data.visibility
     windSpeed.innerText = data.wind.speed
-    country.innerText = data.sys.country
+    form.elements.city.value = form.elements.city.value + ', ' + data.sys.country
     weatherDesc.innerText = data.weather[0].description
     weatherIcon.setAttribute("style", "background-image: url(http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png)")
 }

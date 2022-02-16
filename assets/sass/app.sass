@@ -24,6 +24,7 @@ main
         display: grid
         grid-template-columns: 1fr 1fr
         padding: 5rem 0
+        align-items: center
 
         .form-search
             display: flex
@@ -58,7 +59,7 @@ main
                 margin: 0 5px
 
 .location
-    form, h2
+    form
         align-self: end
         color: $primary-white
 
@@ -74,6 +75,11 @@ main
         letter-spacing: 1.5px
         text-align: right
         width: 250px
+        text-transform: capitalize
+
+::placeholder
+    color: black
+    opacity: 0.35
 
     h2
         font-size: 1.5rem
@@ -104,6 +110,7 @@ main
     padding: 2rem 0
     display: flex
     justify-content: space-between
+    text-align: center
 
     .wrapper
         display: flex
@@ -186,3 +193,161 @@ main
 
 .form-search
     display: block
+
+//media queries
+@media screen and (max-width: 1200px)
+    #advanced-weather-details
+        .container
+            div
+                margin-left: 2rem
+    #advanced-weather-details
+        .weather-temp
+            .temp
+                h3
+                    font-size: 2.0rem
+
+    .weather-desc p
+        font-size: 1rem
+
+@media screen and (max-width: 1000px)
+    #city-bg
+        .container
+            .basic-weather-details
+                h2
+                    font-size: 2rem
+
+    #city-bg
+        .container
+            .basic-weather-details
+                h3
+                    font-size: 1.5rem
+
+    #advanced-weather-details
+        .container
+            p
+                font-size: 1.5rem
+
+    #advanced-weather-details
+        .weather-temp
+            .temp
+                hr
+                    margin: 1rem
+
+@media screen and (max-width: 915px)
+    main
+        grid-template-rows: 1fr 1fr
+
+    #advanced-weather-details
+        flex-direction: column
+        align-items: center
+
+        .container
+            width: 100%
+
+            div
+                margin: 0
+
+        .weather-temp
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: none
+            width: 100%
+            align-items: center
+
+        .wrapper
+            margin-bottom: 3rem
+            width: 100%
+            justify-content: space-between
+
+@media screen and (max-width: 800px)
+    #advanced-weather-details
+        .weather-temp
+            .temp
+                flex-direction: column
+
+@media screen and (max-width: 660px)
+    main
+        display: block
+    #city-bg
+        .container
+            .basic-weather-details
+                h3
+                    font-size: 1.2rem
+
+    .location
+        input
+            font-size: 1.5rem
+            width: 200px
+
+@media screen and (max-width: 600px)
+    #advanced-weather-details
+        .container
+            grid-template-columns: repeat(2,1fr)
+            grid-row-gap: 4em
+    #city-bg
+        .container
+            grid-template-rows: 1fr 1fr
+            grid-template-columns: none
+
+            .basic-weather-details
+                grid-row: 2
+
+            .form-search
+                display: block
+                img
+                    left: 12%
+                    position: absolute
+
+            input
+                text-align: left
+                align-self: flex-start
+                padding-right: 0
+                padding-left: 45px
+
+@media screen and (max-width: 420px)
+    #city-bg
+        .container
+            .form-search
+                form
+                    width: 100%
+                    input
+                        width: inherit
+
+    .container
+        text-align: center
+    #advanced-weather-details
+        .weather-desc
+            margin-bottom: 2em
+        .container
+            grid-template-columns: repeat(1,1fr)
+        .wrapper
+            flex-direction: column
+        .weather-temp
+            grid-template-rows: 1fr 1fr
+            grid-template-columns: none
+            margin: 0
+            .temp
+                margin: 2em 0
+
+@media screen and (max-width: 300px)
+    #city-bg
+        .container
+            input
+                padding-left: 30px
+            .form-search
+                img
+                    width: 15px
+
+            .basic-weather-details
+                h2
+                    font-size: 1.5rem
+
+    #city-bg
+        .container
+            .basic-weather-details
+                h3
+                    font-size: 1rem
+
+    .location
+        input
+            font-size: 1rem
+            width: 150px
