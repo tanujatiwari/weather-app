@@ -1,0 +1,188 @@
+$font-stack: 'Roboto', sans-serif
+$primary-white: #f1f1f1
+$secondary-black: #818181
+
+body
+    margin: 0
+    padding: 0
+
+    h1,h2,h3,form,p,span
+        margin: 0
+        padding: 0
+
+main
+    position: relative
+    min-height: 100vh
+    display: grid
+    grid-template-rows: 3fr 1.3fr
+    font-family: $font-stack
+
+#city-bg
+    .container
+        width: 80%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 1fr
+        padding: 5rem 0
+
+        .form-search
+            display: flex
+            flex-direction: column
+            align-items: right
+            justify-content: center
+
+            form
+                display: flex
+                align-items: center
+
+            img
+                width: 22px
+                position: relative
+                left: 12%
+                opacity: 0.5
+
+        .basic-weather-details
+            display: flex
+            flex-direction: column
+            justify-content: center
+            color: $primary-white
+            font-size: 1.5rem
+            line-height: 1.5
+            letter-spacing: 1.5px
+
+            h2
+                font-size: 2.5rem
+                font-weight: normal
+
+            #slash
+                margin: 0 5px
+
+.location
+    form, h2
+        align-self: end
+        color: $primary-white
+
+    input
+        background: transparent
+        outline: none
+        border: 1px solid #0000006b
+        border-radius: 20px
+        padding-right: 20px
+        color: $primary-white
+        font-size: 1.5rem
+        line-height: 1.5
+        letter-spacing: 1.5px
+        text-align: right
+        width: 250px
+
+    h2
+        font-size: 1.5rem
+        line-height: 1.5
+        letter-spacing: 1.5px
+        padding-right: 20px
+        padding-top: 20px
+        text-align: right
+
+.weather-desc
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-transform: capitalize
+
+    .icon
+        width: 100px
+        height: 100px
+
+    p
+        font-size: 1.2rem
+        letter-spacing: 1.1px
+
+#advanced-weather-details
+    width: 80%
+    margin: 0 auto
+    padding: 2rem 0
+    display: flex
+    justify-content: space-between
+
+    .wrapper
+        display: flex
+
+    hr
+        width: 25px
+        outline: none
+        border: none
+        height: 1.5px
+        background: #ff8787
+        margin: 1rem 0
+
+    .weather-temp
+        display: grid
+        grid-template-rows: 1fr 1fr
+        margin-left: 2rem
+
+        .temp
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #818181
+            font-weight: normal
+            font-size: 0.9rem
+            letter-spacing: 1.5px
+            margin-top: 10px
+
+            h3
+                font-size: 2.5rem
+                font-weight: normal
+                color: black
+
+            hr
+                margin: 1rem 2rem
+
+    .container
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+
+        .icon
+            width: 25px
+            height: 25px
+            border-radius: 50%
+            padding: 10px
+            margin: 0
+
+        .pressure
+            background-color: #ffe651
+
+        .humidity
+            background-color: #4accff
+
+        .visibility
+            background-color: #aa79ff
+
+        .wind-speed
+            background-color: #a3ff79
+
+        img
+            height: 100%
+            width: 100%
+
+        p
+            font-size: 1.7rem
+            letter-spacing: 1.1px
+
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-left: 4rem
+
+            h2
+                color: #818181
+                font-weight: normal
+                font-size: 0.9rem
+                letter-spacing: 1.1px
+                margin-top: 10px
+
+.form-search
+    display: block

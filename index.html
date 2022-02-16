@@ -6,14 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weather Forecaster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
 <body>
-    <form action="">
-        <input type="text" name="city" placeholder="city">
-    </form>
+    <main>
+        <section id="city-bg"">
+            <div class=" container">
+            <div class="basic-weather-details">
+                <h2><span>Jan 1, 1970</span></h2>
+                <h3><span>234.5</span>&#176</h3>
+            </div>
+            <div class="location">
+                <div class="form-search">
+                    <form action="">
+                        <img src="./assets/img/search.png" alt="">
+                        <input type="text" name="city" value="Agra">
+                    </form>
+                </div>
+                <h2 id="country">IN</h2>
+            </div>
+            </div>
+        </section>
+        <section id="advanced-weather-details">
+            <div class="wrapper">
+                <div class="weather-desc">
+                    <div class="icon" style="background: url(http://openweathermap.org/img/wn/10d@2x.png);"></div>
+                    <p>cloudy</p>
+                </div>
+                <div class="weather-temp">
+                    <div class="temp temp-max">
+                        <h3><span>34.1</span>&#176</h3>
+                        <hr>
+                        <p>Max temp</p>
+                    </div>
+                    <div class="temp temp-min">
+                        <h3><span>34.0</span>&#176</h3>
+                        <hr>
+                        <p>Max temp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="humidity">
+                    <div class="icon humidity">
+                        <img src="./assets/img/waterdrop.png" alt="">
+                    </div>
+                    <h2>Humidity (%)</h2>
+                    <hr>
+                    <p>100</p>
+                </div>
+                <div id="pressure">
+                    <div class="icon pressure">
+                        <img src="./assets/img/gauge.png" alt="">
+                    </div>
+                    <h2>Pressure (hPa)</h2>
+                    <hr>
+                    <p>100</p>
+                </div>
+                <div id="visibility">
+                    <div class="icon visibility">
+                        <img src="./assets/img/visibility.png" alt="">
+                    </div>
+                    <h2>Visibility (m)</h2>
+                    <hr>
+                    <p>100</p>
+                </div>
+                <div id="wind-speed">
+                    <div class="icon wind-speed">
+                        <img src="./assets/img/cloud.png" alt="">
+                    </div>
+                    <h2>Wind speed (m/s)</h2>
+                    <hr>
+                    <p>100</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/settings.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

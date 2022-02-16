@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0; }
+  body h1, body h2, body h3, body form, body p, body span {
+    margin: 0;
+    padding: 0; }
+
+main {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 3fr 1.3fr;
+  font-family: "Roboto", sans-serif; }
+
+#city-bg .container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem 0; }
+  #city-bg .container .form-search {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center; }
+    #city-bg .container .form-search form {
+      display: flex;
+      align-items: center; }
+    #city-bg .container .form-search img {
+      width: 22px;
+      position: relative;
+      left: 12%;
+      opacity: 0.5; }
+  #city-bg .container .basic-weather-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px; }
+    #city-bg .container .basic-weather-details h2 {
+      font-size: 2.5rem;
+      font-weight: normal; }
+    #city-bg .container .basic-weather-details #slash {
+      margin: 0 5px; }
+
+.location form, .location h2 {
+  align-self: end;
+  color: #f1f1f1; }
+
+.location input {
+  background: transparent;
+  outline: none;
+  border: 1px solid #0000006b;
+  border-radius: 20px;
+  padding-right: 20px;
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-align: right;
+  width: 250px; }
+
+.location h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  padding-right: 20px;
+  padding-top: 20px;
+  text-align: right; }
+
+.weather-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize; }
+  .weather-desc .icon {
+    width: 100px;
+    height: 100px; }
+  .weather-desc p {
+    font-size: 1.2rem;
+    letter-spacing: 1.1px; }
+
+#advanced-weather-details {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between; }
+  #advanced-weather-details .wrapper {
+    display: flex; }
+  #advanced-weather-details hr {
+    width: 25px;
+    outline: none;
+    border: none;
+    height: 1.5px;
+    background: #ff8787;
+    margin: 1rem 0; }
+  #advanced-weather-details .weather-temp {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 2rem; }
+    #advanced-weather-details .weather-temp .temp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #818181;
+      font-weight: normal;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      margin-top: 10px; }
+      #advanced-weather-details .weather-temp .temp h3 {
+        font-size: 2.5rem;
+        font-weight: normal;
+        color: black; }
+      #advanced-weather-details .weather-temp .temp hr {
+        margin: 1rem 2rem; }
+  #advanced-weather-details .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    #advanced-weather-details .container .icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      padding: 10px;
+      margin: 0; }
+    #advanced-weather-details .container .pressure {
+      background-color: #ffe651; }
+    #advanced-weather-details .container .humidity {
+      background-color: #4accff; }
+    #advanced-weather-details .container .visibility {
+      background-color: #aa79ff; }
+    #advanced-weather-details .container .wind-speed {
+      background-color: #a3ff79; }
+    #advanced-weather-details .container img {
+      height: 100%;
+      width: 100%; }
+    #advanced-weather-details .container p {
+      font-size: 1.7rem;
+      letter-spacing: 1.1px; }
+    #advanced-weather-details .container div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4rem; }
+      #advanced-weather-details .container div h2 {
+        color: #818181;
+        font-weight: normal;
+        font-size: 0.9rem;
+        letter-spacing: 1.1px;
+        margin-top: 10px; }
+
+.form-search {
+  display: block; }
