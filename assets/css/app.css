@@ -256,13 +256,12 @@ main {
 
 @media screen and (max-width: 300px) {
   #city-bg .container input {
-    padding-left: 30px; }
+    padding-left: 30px;
+    font-size: 1rem;
+    width: 150px; }
   #city-bg .container .form-search img {
     width: 15px; }
   #city-bg .container .basic-weather-details h2 {
     font-size: 1.5rem; }
   #city-bg .container .basic-weather-details h3 {
-    font-size: 1rem; }
-  .location input {
-    font-size: 1rem;
-    width: 150px; } }
+    font-size: 1rem; } }
