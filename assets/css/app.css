@@ -57,12 +57,12 @@ main {
   border-radius: 20px;
   padding-right: 20px;
   color: #f1f1f1;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  letter-spacing: 1.5px;
   text-align: right;
   width: 250px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 1.5px; }
 
 ::placeholder {
   color: black;
@@ -78,8 +78,8 @@ main {
 .weather-desc {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-transform: capitalize; }
   .weather-desc .icon {
     width: 100px;
@@ -110,8 +110,9 @@ main {
     margin-left: 2rem; }
     #advanced-weather-details .weather-temp .temp {
       display: flex;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
       color: #818181;
       font-weight: normal;
       font-size: 0.9rem;

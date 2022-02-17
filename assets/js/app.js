@@ -8,37 +8,30 @@ const renderCityImg = (data) => {
 }
 
 function timeConverter(UNIX_timestamp) {
-    var a = new Date(UNIX_timestamp * 1000);
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var time = month + ' ' + date + ', ' + year;
+    let a = new Date(UNIX_timestamp * 1000);
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let year = a.getFullYear();
+    let month = months[a.getMonth()];
+    let date = a.getDate();
+    let time = month + ' ' + date + ', ' + year;
     return time;
 }
 
 const renderWeatherDetails = (data) => {
     let date = document.querySelector('.basic-weather-details h2 span')
-    let temp = document.querySelector('.basic-weather-details h3 span')
     let weatherIcon = document.querySelector('.weather-desc .icon')
-    let weatherDesc = document.querySelector('.weather-desc p')
-    let pressure = document.querySelector('#pressure p')
-    let humidity = document.querySelector('#humidity p')
-    let visibility = document.querySelector('#visibility p')
-    let windSpeed = document.querySelector('#wind-speed p')
-    let tempMax = document.querySelector('.temp-max h3 span')
-    let tempMin = document.querySelector('.temp-min h3 span')
-    temp.innerText = data.main.temp + ', ' + data.weather[0].main
-    date.innerText = timeConverter(data.dt)
-    tempMax.innerText = data.main.temp_max
-    tempMin.innerText = data.main.temp_min
-    pressure.innerText = data.main.pressure
-    humidity.innerText = data.main.humidity
-    visibility.innerText = data.visibility
-    windSpeed.innerText = data.wind.speed
-    form.elements.city.value = form.elements.city.value + ', ' + data.sys.country
-    weatherDesc.innerText = data.weather[0].description
     weatherIcon.setAttribute("style", "background-image: url(http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png)")
+    document.querySelector('.basic-weather-details h3 span.cur-temp').innerText = data.main.temp
+    document.querySelector('.cur-weather-desc').innerText = data.weather[0].main
+    document.querySelector('.weather-desc p').innerText = data.weather[0].description
+    document.querySelector('#pressure p').innerText = data.main.pressure
+    document.querySelector('#humidity p').innerText = data.main.humidity
+    document.querySelector('#visibility p').innerText = data.visibility
+    document.querySelector('#wind-speed p').innerText = data.wind.speed
+    document.querySelector('.temp-max h3 span').innerText = data.main.temp_max
+    document.querySelector('.temp-min h3 span').innerText = data.main.temp_min
+    date.innerText = timeConverter(data.dt)
+    form.elements.city.value = form.elements.city.value
 }
 
 window.onload = async function getCurLoc() {
