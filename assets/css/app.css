@@ -12,39 +12,48 @@ main {
   grid-template-rows: 3fr 1.3fr;
   font-family: "Roboto", sans-serif; }
 
-#city-bg .container {
-  width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 5rem 0;
-  align-items: center; }
-  #city-bg .container .form-search {
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: center; }
-    #city-bg .container .form-search form {
+.black-film {
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+  height: 100%; }
+
+#city-bg {
+  position: relative;
+  z-index: 2; }
+  #city-bg .container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem 0;
+    align-items: center; }
+    #city-bg .container .form-search {
       display: flex;
-      align-items: center; }
-    #city-bg .container .form-search img {
-      width: 22px;
-      position: relative;
-      left: 12%;
-      opacity: 0.5; }
-  #city-bg .container .basic-weather-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #f1f1f1;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    letter-spacing: 1.5px; }
-    #city-bg .container .basic-weather-details h2 {
-      font-size: 2.5rem;
-      font-weight: normal; }
-    #city-bg .container .basic-weather-details #slash {
-      margin: 0 5px; }
+      flex-direction: column;
+      align-items: right;
+      justify-content: center; }
+      #city-bg .container .form-search form {
+        display: flex;
+        align-items: center; }
+      #city-bg .container .form-search img {
+        width: 22px;
+        position: relative;
+        left: 12%;
+        opacity: 0.5; }
+    #city-bg .container .basic-weather-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #f1f1f1;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      letter-spacing: 1.5px; }
+      #city-bg .container .basic-weather-details h2 {
+        font-size: 2.5rem;
+        font-weight: normal; }
+      #city-bg .container .basic-weather-details #slash {
+        margin: 0 5px; }
 
 .location form {
   align-self: end;
